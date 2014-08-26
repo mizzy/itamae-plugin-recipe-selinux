@@ -1,3 +1,5 @@
+include_recipe 'common.rb'
+
 execute 'setenforce 0' do
   not_if 'getenforce | grep Disabled'
 end
