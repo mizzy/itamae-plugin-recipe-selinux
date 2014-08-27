@@ -1,6 +1,6 @@
 # Itamae::Plugin::Recipe::Selinux
 
-TODO: Write a gem description
+This is [Itamae](https://github.com/ryotarai/itamae) recipe plugin for controlling SELinux.
 
 ## Installation
 
@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To make SELinux disabled, write this line in your recipe.
+
+```ruby
+include_recipe 'selinux::disabled'
+```
+
+To make SELinux permissive, write this line in your recipe.
+
+```ruby
+include_recipe 'selinux::permissive'
+```
+
+To make SELinux enforcing, write this line in your recipe.
+
+```ruby
+include_recipe 'selinux::enforcing'
+```
+
 
 ## Contributing
 

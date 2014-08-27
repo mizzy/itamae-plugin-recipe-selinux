@@ -1,7 +1,6 @@
 case os[:family]
 when %r(debian|ubuntu)
   package 'selinux-utils'
-when 'redhat', 'fedora'
+when %r(redhat|fedora)
   package 'libselinux-utils'
 end
-
