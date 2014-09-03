@@ -5,6 +5,6 @@ execute 'setenforce 0' do
 end
 
 template '/etc/selinux/config' do
-  @selinux = 'disabled'
+  variables(selinux: 'disabled')
   source 'config.erb'
 end

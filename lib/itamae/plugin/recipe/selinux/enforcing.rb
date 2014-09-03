@@ -5,6 +5,6 @@ execute 'setenforce 1' do
 end
 
 template '/etc/selinux/config' do
-  @selinux = 'enforcing'
+  variables(selinux: 'enforcing')
   source 'config.erb'
 end

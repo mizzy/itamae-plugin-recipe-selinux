@@ -5,6 +5,6 @@ execute 'setenforce 0' do
 end
 
 template '/etc/selinux/config' do
-  @selinux = 'permissive'
+  variables(selinux: 'permissive')
   source 'config.erb'
 end
